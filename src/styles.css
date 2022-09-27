@@ -2,6 +2,7 @@
   --primary-color: #6c63ff;
   --secondary-color: #f5f2fe;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --media-color: #d18ff0;
 }
 
 body {
@@ -134,7 +135,9 @@ p {
   padding: 80px 30px;
 }
 
-.weather-app {
+.weather-app,
+.yoga-app,
+.yogurt-app {
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
   color: white;
@@ -158,4 +161,50 @@ p {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   max-width: 100%;
   height: fit-content;
+}
+
+@media (max-width: 576px) {
+  .desktop-only {
+    display: none;
+  }
+  .weather-text,
+  .yoga-text,
+  .yogurt-text {
+    display: inline;
+    width: fit-content;
+  }
+  .weather-app,
+  .yoga-app,
+  .yogurt-app {
+    width: 150px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: var(--media-color);
+  }
+  .contact-link {
+    background: var(--media-color);
+  }
+  .about-link {
+    color: var(--media-color);
+    border: 1px solid var(--media-color);
+  }
+  .about {
+    width: fit-content;
+  }
+  .about-img-weather {
+    margin-bottom: 20px;
+  }
+  .email-link {
+    color: var(--media-color);
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
